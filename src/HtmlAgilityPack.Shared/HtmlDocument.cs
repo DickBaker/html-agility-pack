@@ -64,6 +64,7 @@ namespace HtmlAgilityPack
         private static int _maxDepthLevel = int.MaxValue;
 
         private int _c;
+        [Obsolete]
         private Crc32 _crc32;
         private HtmlAttribute _currentattribute;
         private HtmlNode _currentnode;

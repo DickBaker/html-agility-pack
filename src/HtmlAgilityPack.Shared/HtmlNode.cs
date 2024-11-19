@@ -1398,7 +1398,7 @@ namespace HtmlAgilityPack
 
 			return att.Value;
 #else
-			return GetAttributeValue<string>(name, def, null);
+			return GetAttributeValue(name, def, null);
 #endif
         } 
 
@@ -1436,7 +1436,7 @@ namespace HtmlAgilityPack
 				return def;
 			}
 #else
-			return GetAttributeValue<int>(name, def, int.TryParse);
+			return GetAttributeValue(name, def, int.TryParse);
 #endif
 		}
 
@@ -1474,7 +1474,7 @@ namespace HtmlAgilityPack
 				return def;
 			}
 #else
-			return GetAttributeValue<bool>(name, def, bool.TryParse);
+			return GetAttributeValue(name, def, bool.TryParse);
 #endif
 		}
 
@@ -2783,7 +2783,7 @@ namespace HtmlAgilityPack
 		}
 
 		/// <summary>Check if the node class has the parameter class.</summary>
-		/// <param name="class">The class.</param>
+		/// <param name="className">The class.</param>
 		/// <returns>True if node class has the parameter class, false if not.</returns>
 		public bool HasClass(string className)
 		{
